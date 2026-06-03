@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Victoria Harmon — Luxury Real Estate Agent</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--navy:#0B1426;--navy2:#0F1E3A;--navy3:#152848;--gold:#B8960C;--gold-l:#D4AF37;--gold-pale:#F9F4E3;--white:#fff;--off:#F8F7F4;--gray:#888;--gray2:#555;--text:#1A1A2E;--radius:12px;--shadow:0 8px 32px rgba(11,20,38,0.10)}
+html{scroll-behavior:smooth}body{font-family:'Inter',sans-serif;background:var(--white);color:var(--text);overflow-x:hidden}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}.section{padding:88px 0}
+.tag{display:inline-flex;align-items:center;gap:6px;background:rgba(184,150,12,0.10);border:1px solid rgba(184,150,12,0.25);color:var(--gold);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:100px}
+.tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold-l);flex-shrink:0}
+.sh{text-align:center;margin-bottom:60px}.sh .tag{margin-bottom:14px}
+.sh h2{font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);font-weight:800;color:var(--navy);line-height:1.15;margin-bottom:12px}
+.sh p{font-size:16px;color:var(--gray2);max-width:520px;margin:0 auto;line-height:1.75}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;font-size:15px;font-weight:700;padding:14px 28px;border-radius:8px;border:none;cursor:pointer;text-decoration:none;transition:all .25s}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-l));color:var(--navy);box-shadow:0 8px 28px rgba(184,150,12,0.30)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(184,150,12,0.40)}
+.btn-navy{background:var(--navy);color:var(--white)}.btn-navy:hover{background:var(--navy2);transform:translateY(-2px)}
+.btn-outline{background:transparent;color:var(--navy);border:1.5px solid var(--navy);}.btn-outline:hover{background:var(--navy);color:var(--white)}
+.btn-lg{font-size:16px;padding:16px 34px;border-radius:10px}
+.arr{width:17px;height:17px;transition:transform .2s}.btn:hover .arr{transform:translateX(3px)}
+.fu{opacity:0;transform:translateY(22px);transition:opacity .65s,transform .65s}.fu.v{opacity:1;transform:none}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(184,150,12,0.15);transition:all .3s}
+nav.s{box-shadow:0 2px 20px rgba(0,0,0,0.08)}
+.ni{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:66px;padding:0 24px}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:800;color:var(--navy);text-decoration:none}
+.logo span{color:var(--gold)}
+.nl{display:flex;gap:24px}.nl a{color:var(--gray2);font-size:14px;font-weight:500;text-decoration:none;transition:color .2s}.nl a:hover{color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+.ham span{display:block;width:22px;height:2px;background:var(--navy);border-radius:2px}
+.mob{display:none;position:fixed;top:66px;left:0;right:0;z-index:99;background:rgba(255,255,255,0.98);border-top:1px solid rgba(184,150,12,0.15);padding:18px 24px;flex-direction:column;gap:4px;box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.mob.o{display:flex}.mob a{color:var(--gray2);font-size:16px;font-weight:500;text-decoration:none;padding:11px 0;border-bottom:1px solid #eee}.mob .btn{margin-top:12px;justify-content:center}
+/* HERO */
+#hero{background:var(--navy);min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.hbg{position:absolute;inset:0;background:linear-gradient(160deg,#0B1426 0%,#152848 50%,#0B1426 100%)}
+.hgold{position:absolute;width:500px;height:500px;border-radius:50%;background:rgba(184,150,12,0.06);filter:blur(100px);top:-100px;right:-50px}
+.hi{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:130px 24px 80px;display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.heyebrow{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.hel{width:28px;height:1px;background:var(--gold-l)}
+.het{font-size:11px;font-weight:700;color:var(--gold-l);letter-spacing:.12em;text-transform:uppercase}
+h1.ht{font-family:'Playfair Display',serif;font-size:clamp(36px,5vw,60px);font-weight:800;color:var(--white);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
+h1.ht em{font-style:normal;color:var(--gold-l)}
+.hs{font-size:16px;color:rgba(255,255,255,0.58);line-height:1.80;margin-bottom:32px;max-width:440px}
+.hbtns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px}
+.htrust{display:flex;gap:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08)}
+.ht-num{font-size:24px;font-weight:900;color:var(--white);letter-spacing:-.04em}
+.ht-label{font-size:11px;color:rgba(255,255,255,0.45);margin-top:2px}
+/* Agent card */
+.agent-card{background:rgba(255,255,255,0.05);border:1px solid rgba(184,150,12,0.20);border-radius:20px;padding:32px;text-align:center}
+.ac-av{width:100px;height:100px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold-l));display:flex;align-items:center;justify-content:center;font-size:36px;font-weight:900;color:var(--navy);margin:0 auto 16px;border:3px solid rgba(184,150,12,0.40);box-shadow:0 0 0 6px rgba(184,150,12,0.08)}
+.ac-name{font-family:'Playfair Display',serif;font-size:22px;font-weight:800;color:var(--white);margin-bottom:4px}
+.ac-title{font-size:13px;color:var(--gold-l);font-weight:600;margin-bottom:18px}
+.ac-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08)}
+.acs-num{font-size:20px;font-weight:900;color:var(--gold-l);letter-spacing:-.03em}
+.acs-label{font-size:10px;color:rgba(255,255,255,0.45);margin-top:2px}
+.ac-badge{background:rgba(184,150,12,0.10);border:1px solid rgba(184,150,12,0.25);color:var(--gold-l);font-size:11px;font-weight:600;padding:3px 10px;border-radius:100px;display:inline-block;margin:3px}
+/* LISTINGS */
+#listings{background:var(--off)}
+.lg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lc{background:var(--white);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:all .3s}
+.lc:hover{transform:translateY(-5px);box-shadow:0 20px 56px rgba(11,20,38,0.14)}
+.lthumb{height:200px;position:relative;overflow:hidden}
+.lbg1{background:linear-gradient(135deg,#1a2a4a,#243a6a)}
+.lbg2{background:linear-gradient(135deg,#2a1a1a,#4a2a2a)}
+.lbg3{background:linear-gradient(135deg,#1a2a1a,#2a4a2a)}
+.lthumb-inner{height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:6px}
+.lthumb-price{font-size:28px;font-weight:900;color:rgba(255,255,255,0.90);letter-spacing:-.04em}
+.lthumb-type{font-size:11px;font-weight:700;color:rgba(255,255,255,0.50);text-transform:uppercase;letter-spacing:.1em}
+.lbadge{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--navy);font-size:10px;font-weight:800;padding:4px 10px;border-radius:100px;letter-spacing:.05em}
+.lbody{padding:20px}
+.laddress{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.lcity{font-size:13px;color:var(--gray);margin-bottom:14px}
+.lspecs{display:flex;gap:16px}
+.lspec{font-size:12px;color:var(--gray2);display:flex;align-items:center;gap:4px}
+.lspec strong{font-weight:700;color:var(--navy)}
+/* SERVICES */
+#services{background:var(--white)}
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.sc{background:var(--off);border:1px solid #eee;border-radius:var(--radius);padding:30px;transition:all .3s}
+.sc:hover{border-color:rgba(184,150,12,0.30);box-shadow:var(--shadow)}
+.sc-icon{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--navy3));display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.sc-icon svg{width:24px;height:24px;color:var(--gold-l)}
+.sc h3{font-size:17px;font-weight:800;color:var(--navy);margin-bottom:8px;letter-spacing:-.02em}
+.sc p{font-size:14px;color:var(--gray2);line-height:1.70}
+/* TESTIMONIALS */
+#testimonials{background:var(--off)}
+.tg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.tc{background:var(--white);border:1px solid #eee;border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);transition:all .3s}
+.tc:hover{transform:translateY(-3px);box-shadow:0 16px 48px rgba(11,20,38,0.12)}
+.t-stars{color:var(--gold);font-size:14px;letter-spacing:2px;margin-bottom:12px}
+.t-q{font-size:14px;color:var(--gray2);line-height:1.75;margin-bottom:18px;font-style:italic}
+.t-auth{display:flex;align-items:center;gap:10px}
+.t-av{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--white);flex-shrink:0}
+.t-name{font-size:14px;font-weight:700;color:var(--navy)}
+.t-role{font-size:11px;color:var(--gray)}
+/* CTA */
+#cta{background:var(--navy);text-align:center;position:relative;overflow:hidden}
+.cta-inner{position:relative;z-index:2}
+.cta-inner h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,50px);font-weight:800;color:var(--white);line-height:1.15;margin-bottom:16px}
+.cta-inner h2 em{font-style:normal;color:var(--gold-l)}
+.cta-inner p{font-size:16px;color:rgba(255,255,255,0.60);max-width:500px;margin:0 auto 32px;line-height:1.75}
+/* CONTACT */
+#contact{background:var(--white)}
+.cong{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start}
+.ci h2{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,34px);font-weight:800;color:var(--navy);margin-bottom:12px}
+.ci p{font-size:14px;color:var(--gray2);line-height:1.75;margin-bottom:22px}
+.cd{display:flex;align-items:center;gap:11px;font-size:14px;color:var(--gray2);margin-bottom:12px}
+.ci-ic{width:36px;height:36px;border-radius:9px;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.ci-ic svg{width:16px;height:16px;color:var(--gold-l)}
+.cf{background:var(--off);border:1px solid #eee;border-radius:var(--radius);padding:34px;box-shadow:var(--shadow)}
+.cf h3{font-size:18px;font-weight:800;color:var(--navy);margin-bottom:6px}
+.cf>p{font-size:13px;color:var(--gray);margin-bottom:22px}
+.fg{margin-bottom:13px}
+.fg label{display:block;font-size:11px;font-weight:700;color:var(--gray2);margin-bottom:5px;text-transform:uppercase;letter-spacing:.05em}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;background:var(--white);border:1.5px solid #ddd;border-radius:8px;font-family:'Inter',sans-serif;font-size:14px;color:var(--text);outline:none;transition:border-color .2s}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:var(--gold)}
+.fg textarea{resize:vertical;min-height:85px}
+.fgr{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+/* FOOTER */
+footer{background:var(--navy);padding:48px 0 22px}
+.ft{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;margin-bottom:28px}
+.ft-links{display:flex;gap:18px}.ft-links a{font-size:13px;color:rgba(255,255,255,0.40);text-decoration:none}.ft-links a:hover{color:var(--gold-l)}
+.fb-bot{text-align:center;font-size:13px;color:rgba(255,255,255,0.25);border-top:1px solid rgba(255,255,255,0.07);padding-top:22px}
+@media(max-width:768px){.nl,.nc{display:none}.ham{display:flex}.hi{grid-template-columns:1fr;padding:120px 24px 60px}.agent-card{display:none}.cong{grid-template-columns:1fr}.tg{grid-template-columns:1fr}}
+@media(max-width:480px){.lg,.sg{grid-template-columns:1fr}.fgr{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav id="nb"><div class="ni">
+  <a href="#" class="logo">Victoria <span>Harmon</span></a>
+  <div class="nl"><a href="#listings">Listings</a><a href="#services">Services</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a></div>
+  <div class="nc" style="display:flex;gap:10px"><a href="#contact" class="btn btn-gold">Schedule a Call <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+  <button class="ham" id="ham"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="mob" id="mob">
+  <a href="#listings" onclick="cm()">Listings</a><a href="#services" onclick="cm()">Services</a><a href="#testimonials" onclick="cm()">Reviews</a>
+  <a href="#contact" onclick="cm()" class="btn btn-gold btn-lg">Schedule a Call</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hbg"></div><div class="hgold"></div>
+  <div class="hi">
+    <div>
+      <div class="heyebrow"><div class="hel"></div><span class="het">Luxury Real Estate · Beverly Hills</span></div>
+      <h1 class="ht">Find Your Dream Home With a Trusted <em>Expert</em></h1>
+      <p class="hs">With over $120M in closed sales and 15 years of luxury real estate experience, I help buyers and sellers achieve exceptional results in today's market.</p>
+      <div class="hbtns">
+        <a href="#contact" class="btn btn-gold btn-lg">Schedule Free Consultation <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#listings" class="btn btn-outline btn-lg" style="color:var(--white);border-color:rgba(255,255,255,0.25)">View Listings</a>
+      </div>
+      <div class="htrust">
+        <div><div class="ht-num">$120M+</div><div class="ht-label">Total closed sales</div></div>
+        <div><div class="ht-num">340+</div><div class="ht-label">Homes sold</div></div>
+        <div><div class="ht-num">15 yrs</div><div class="ht-label">Experience</div></div>
+      </div>
+    </div>
+    <div class="agent-card fu" style="transition-delay:.2s">
+      <div class="ac-av">VH</div>
+      <div class="ac-name">Victoria Harmon</div>
+      <div class="ac-title">Luxury Real Estate Specialist · DRE #01234567</div>
+      <div>
+        <span class="ac-badge">Beverly Hills</span><span class="ac-badge">Malibu</span><span class="ac-badge">Bel-Air</span>
+        <span class="ac-badge">Buyer Rep</span><span class="ac-badge">Luxury Listing</span>
+      </div>
+      <div class="ac-stats">
+        <div><div class="acs-num">$120M+</div><div class="acs-label">Closed Sales</div></div>
+        <div><div class="acs-num">98%</div><div class="acs-label">List-to-Sale</div></div>
+        <div><div class="acs-num">4.9★</div><div class="acs-label">Client Rating</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LISTINGS -->
+<section id="listings" class="section">
+  <div class="container">
+    <div class="sh fu"><span class="tag">Featured Listings</span><h2>Current Properties</h2><p>Exclusive properties in Beverly Hills, Malibu, and Bel-Air — curated for discerning buyers.</p></div>
+    <div class="lg">
+      <div class="lc fu"><div class="lthumb lbg1"><div class="lthumb-inner"><div class="lthumb-price">$4,850,000</div><div class="lthumb-type">Single Family · 6,200 sq ft</div></div><span class="lbadge">Just Listed</span></div><div class="lbody"><div class="laddress">247 Rosewood Canyon Drive</div><div class="lcity">Beverly Hills, CA 90210</div><div class="lspecs"><div class="lspec"><strong>5</strong> Beds</div><div class="lspec"><strong>6</strong> Baths</div><div class="lspec"><strong>6,200</strong> sqft</div><div class="lspec"><strong>0.8</strong> acres</div></div></div></div>
+      <div class="lc fu" style="transition-delay:.1s"><div class="lthumb lbg2"><div class="lthumb-inner"><div class="lthumb-price">$7,200,000</div><div class="lthumb-type">Oceanfront · 4,800 sq ft</div></div><span class="lbadge" style="background:var(--navy);color:var(--gold-l)">Exclusive</span></div><div class="lbody"><div class="laddress">18 Pacific Coast Hwy, Unit 4A</div><div class="lcity">Malibu, CA 90265</div><div class="lspecs"><div class="lspec"><strong>4</strong> Beds</div><div class="lspec"><strong>5</strong> Baths</div><div class="lspec"><strong>4,800</strong> sqft</div><div class="lspec">Ocean views</div></div></div></div>
+      <div class="lc fu" style="transition-delay:.2s"><div class="lthumb lbg3"><div class="lthumb-inner"><div class="lthumb-price">$2,950,000</div><div class="lthumb-type">Modern Estate · 3,900 sq ft</div></div><span class="lbadge" style="background:#16A34A;color:var(--white)">Open House</span></div><div class="lbody"><div class="laddress">614 Summit Ridge Road</div><div class="lcity">Bel-Air, CA 90077</div><div class="lspecs"><div class="lspec"><strong>4</strong> Beds</div><div class="lspec"><strong>4</strong> Baths</div><div class="lspec"><strong>3,900</strong> sqft</div><div class="lspec">Pool + Spa</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="sh fu"><span class="tag">How I Help</span><h2>Full-Service Real Estate Expertise</h2></div>
+    <div class="sg">
+      <div class="sc fu"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Luxury Home Sales</h3><p>Expert pricing strategy, professional staging, premium photography, and wide-reach marketing that achieves top-dollar results for your listing — fast.</p></div>
+      <div class="sc fu" style="transition-delay:.1s"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg></div><h3>Buyer Representation</h3><p>Access to off-market listings, expert negotiation, and full guidance from search to close — ensuring you never overpay and always get the best terms.</p></div>
+      <div class="sc fu" style="transition-delay:.2s"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>Investment Properties</h3><p>ROI analysis, market forecasting, and sourcing high-yield residential and multi-family investment properties in premium LA-area markets.</p></div>
+      <div class="sc fu" style="transition-delay:.3s"><div class="sc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><h3>Market Analysis & Consulting</h3><p>Comprehensive comparative market analysis, neighbourhood trend reports, and strategic consulting for both buyers and sellers making data-driven decisions.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section">
+  <div class="container">
+    <div class="sh fu"><span class="tag">Client Reviews</span><h2>What My Clients Say</h2></div>
+    <div class="tg">
+      <div class="tc fu"><div class="t-stars">★★★★★</div><p class="t-q">"Victoria sold our Beverly Hills home in 9 days at 104% of asking price. Her knowledge of the luxury market is unparalleled. Absolutely the best agent we've ever worked with."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#0B1426,#152848)">RB</div><div><div class="t-name">Robert & Linda Barnes</div><div class="t-role">Seller · Beverly Hills</div></div></div></div>
+      <div class="tc fu" style="transition-delay:.1s"><div class="t-stars">★★★★★</div><p class="t-q">"After looking for 8 months with another agent, Victoria found us our dream Malibu home — off-market — in 3 weeks. Her network is extraordinary."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#B8960C,#D4AF37)">JC</div><div><div class="t-name">James & Claire Thornton</div><div class="t-role">Buyer · Malibu</div></div></div></div>
+      <div class="tc fu" style="transition-delay:.2s"><div class="t-stars">★★★★★</div><p class="t-q">"Victoria negotiated $280,000 below asking price on our Bel-Air property. Her strategy and composure in negotiations saved us a fortune. Highly, highly recommend."</p><div class="t-auth"><div class="t-av" style="background:linear-gradient(135deg,#6366F1,#4F46E5)">MP</div><div><div class="t-name">Michael Patterson</div><div class="t-role">Buyer · Bel-Air</div></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="section">
+  <div class="hgold" style="opacity:.5"></div>
+  <div class="container"><div class="cta-inner fu" style="text-align:center">
+    <span class="tag" style="margin-bottom:18px">Let's Connect</span>
+    <h2>Ready to Buy, Sell, or <em>Invest?</em></h2>
+    <p>Schedule a complimentary 30-minute consultation. No pressure — just expert guidance on your next real estate move.</p>
+    <a href="#contact" class="btn btn-gold btn-lg">Schedule Free Consultation <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div></div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="container"><div class="cong">
+    <div class="fu"><span class="tag" style="margin-bottom:14px">Get In Touch</span>
+      <h2>Schedule a Consultation</h2>
+      <p>Whether buying, selling, or investing — reach out and I'll provide a free market analysis and strategy session tailored to your goals.</p>
+      <div class="cd"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>victoria@meridianrealty.com</div>
+      <div class="cd"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>+1 (310) 555-8820</div>
+      <div class="cd"><div class="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>265 North Beverly Drive, Beverly Hills CA 90210</div>
+    </div>
+    <div class="cf fu" style="transition-delay:.2s">
+      <h3>Request a Free Consultation</h3><p>I'll respond within the same business day.</p>
+      <div class="fgr"><div class="fg"><label>First Name</label><input type="text" placeholder="John"/></div><div class="fg"><label>Last Name</label><input type="text" placeholder="Smith"/></div></div>
+      <div class="fg"><label>Email Address</label><input type="email" placeholder="john@email.com"/></div>
+      <div class="fg"><label>Phone Number</label><input type="tel" placeholder="+1 (310) 000-0000"/></div>
+      <div class="fg"><label>I'm looking to...</label><select><option value="">Select...</option><option>Buy a Home</option><option>Sell my Home</option><option>Both Buy and Sell</option><option>Invest in Property</option><option>Get a Market Analysis</option></select></div>
+      <div class="fg"><label>Tell me more about your situation</label><textarea placeholder="Budget, timeline, neighbourhoods of interest, or any other details..."></textarea></div>
+      <button class="btn btn-gold btn-lg" style="width:100%;justify-content:center" onclick="this.textContent='✓ Request received! I\'ll be in touch today.';this.style.background='#16A34A';this.style.color='#fff';this.disabled=true">Request Free Consultation <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
+    </div>
+  </div></div>
+</section>
+
+<footer><div class="container">
+  <div class="ft"><a href="#" class="logo" style="font-family:'Playfair Display',serif;font-size:17px;font-weight:800;color:var(--white);text-decoration:none">Victoria <span style="color:var(--gold-l)">Harmon</span></a><div class="ft-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">LinkedIn</a><a href="#">Instagram</a></div></div>
+  <div class="fb-bot">© 2025 Victoria Harmon Real Estate · DRE #01234567 · All rights reserved.</div>
+</div></footer>
+
+<script>
+const nb=document.getElementById('nb');
+window.addEventListener('scroll',()=>nb.classList.toggle('s',scrollY>30));
+document.getElementById('ham').addEventListener('click',()=>document.getElementById('mob').classList.toggle('o'));
+function cm(){document.getElementById('mob').classList.remove('o')}
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('v')}),{threshold:.1});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+</script>
+</body></html>
